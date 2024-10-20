@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-image: url(../img/W52_2023_EXPLORE_PLP_GIFT.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navigation {
+    background-image: url('https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-storefront-final/default/dw820851d4/images/W52_2023_H1_DESK_PLP_ALL_LUGGAGE.jpg');
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    letter-spacing: 3px;
+    background-color: aqua;
+
+}
+
+.nav {
+    background-color: transparent;
+    width: 100%;
+    /* transition: 1s ease-in-out; */
+    padding: 1rem;
+    line-height: 1;
+    position: relative;
+    transition: top 0.3s ease;
+    /* background-color: white; */
+    z-index: 999;
+}
+
+.nav-up-scroll {
+    background-color: white;
+    color: blue;
+}
+
+.nav-up-scroll .list a {
+    color: black;
+}
+
+.nav-up-scroll .put input {
+    color: black;
+    border-color: black;
+}
+
+.nav-up-scroll .put .Search {
+    color: black;
+}
+
+.nav-up-scroll .eng {
+    color: black;
+}
+
+.nav-up-scroll .fa-user,
+.nav-up-scroll .fa-heart {
+    color: black;
+}
+
+.nav-fixed {
+    background-color: rgba(255, 255, 255, 0.896);
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    top: -100px;
+}
+
+.nav-up {
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+
+}
+
+.english {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-down {
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav:hover a {
+    color: black;
+}
+
+.nav:hover h1 {
+    color: black;
+}
+
+.nav:hover input::placeholder {
+    color: black;
+
+}
+
+.nav-up h1 {
+    color: white;
+}
+
+.nav:hover input {
+    border: 1px solid black;
+}
+
+.fa-regular {
+    color: white;
+}
+
+.nav input {
+    /* background-color:palevioletred ; */
+    outline: none;
+    border: 1px solid white;
+    padding: .5rem;
+    background-color: transparent;
+}
+
+.nav-input input::placeholder {
+    color: white;
+}
+
+.nav:hover span {
+    color: black;
+}
+
+.nav span {
+    color: white;
+}
+
+.nav:hover .fa-regular {
+    color: black;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-decoration: none;
+    width: 100%;
+    list-style: none;
+
+}
+
+.list a {
+    /* text-decoration: none; */
+
+}
+
+.nav-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    /* background-color: red; */
+}
+
+.nav-inside {
+    color: white;
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    bottom: 25%;
+    left: 30%;
+
+}
+
+.nav-inside2 {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    /* background-color: red; */
+}
+
+.nav-inside2 h2 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+
+
+main {
+    margin-top: 2rem;
+}
+
+.cat1 {
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    color: grey;
+}
+
+.cat1 p {
+    letter-spacing: 3px;
+
+}
+
+.cat {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.colo {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+.emerald {
+    background-image: url(../img/PLP_SQUARE_NOC5_ALL_LUGGAGE_270624.jpg);
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 3;
+    color: white;
+}
+.emerald a{
+color: white;}
+
+.explore {
+    text-align: center;
+}
+
+.gifts {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+
+}
+
+.small-gift1 {
+    line-height: 2;
+    margin: 2rem;
+}
+
+.small-gift1 p {
+    color: #4242429f;
+    font-size: 1.4rem;
+}
+
+.small-gift1 h5 {
+    color: #424242ae;
+    font-size: 3rem;
+}
+
+.small-gift {
+    /* background-color: gold; */
+    line-height: 3;
+    margin: 2rem;
+    color: #ffffff;
+}
+
+.small-gift p {
+    display: block;
+    font-family: RimowaGroteskLight, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.small-gift h3 {
+    font-family: RimowaGroteskLight, sans-serif;
+    font-size: 2.22rem;
+    font-weight: 700;
+    line-height: 44px;
+    margin: 10px 0;
+}
+
+.gift {
+    background-image: url('https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dwb5c87bec/images/mozaic_vertical/W52_2023_EXPLORE_PLP_GIFT.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: yellow;
+    height: 600px;
+    width: 100%;
+
+}
+
+.gift-2 {
+    background-image: url('https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw9b587abe/images/mozaic_vertical/W52_2023_EXPLORE_PLP_BEST_SELLERS.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: yellow;
+    height: 600px;
+    width: 100%;
+}
+
+.lug {
+    /* background-color: burlywood; */
+}
+
+.lug a {
+    text-decoration: none;
+    color: gray;
+}
+
+.lug-grid {
+    display: grid;
+    background-color: #0d0900;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: gray;
+    text-align: center;
+}
+
+.lug-grid p:nth-child(2) {
+    /* background-color: red; */
+    color: white;
+}
+
+.lug-text {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: gray;
+    gap: 5px;
+    /* background-color: aqua; */
+
+}
+
+.lug-text span {
+    margin-bottom: 1.4rem;
+    font-size: 3rem;
+    color: #0d0900;
+}
+
+.foot-sign {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 3rem;
+    /* background-color: burlywood; */
+    gap: 40px;
+    height: 700px;
+    padding: 2rem;
+}
+
+.foot-sign-one p:nth-child(1) {
+    text-align: left;
+    /* background-color: red; */
+    color: #b2ada6;
+    /* display: block; */
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    line-height: 11px;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+
+.foot-sign-one p:nth-child(2) {
+    text-align: left;
+    color: #ffffff;
+}
+
+.location img {
+    width: 40%;
+}
+
+.location {
+    display: flex;
+    /* background-color: red; */
+    line-height: 1.9;
+    gap: 10px;
+}
+
+.cover {
+    background-color: greenyellow;
+    /* width: 100%; */
+
+}
+
+.location p {
+    /* background-color: aqua; */
+    color: #b2ada6;
+    /* display: block; */
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    line-height: 11px;
+}
+
+.location h5 {
+    /* background-color: blueviolet; */
+    color: #ffffff;
+}
+
+.btn-2 {
+    padding: 0 60px;
+    width: 50%;
+    background: 0 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    letter-spacing: 2.25px;
+    line-height: 12px;
+    overflow: hidden;
+    padding: 16px 12px;
+    text-transform: uppercase;
+    background-color: #0c67e7;
+    color: #fff;
+
+}
+.account{
+    background-color: white;
+   
+    padding: 1rem;
+    width: 30%;
+    /* margin: auto; */
+    line-height: 2;
+    right: 30px;
+    display: none;
+    position: fixed;
+    bottom: 39%;
+
+}
+.signin{
+padding: 20px 50px;
+width: 100%;
+background-color: #0d0900;
+color: white;
+margin-top: 1rem;
+margin-bottom: 1rem;
+letter-spacing: 3px;
+cursor: pointer;
+
+
+}
+.account h1{
+    color: black;
+letter-spacing: 3px;
+text-align: center;
+
+}
+.signup{
+    padding: 20px 50px;
+letter-spacing: 3px;
+width: 100%;
+border: 1px solid black;
+cursor: pointer;
+
+
+}
+.acct-links{
+/* background-color: peru; */
+margin-top: 1rem;
+width: 100%;
+}
+.acct-links a{
+text-decoration: none;
+color: black;
+
+}
+.log{
+/* border-top: 1 px solid black; */
+width: 100%;
+
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+}

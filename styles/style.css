@@ -1,0 +1,1018 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-image: url('https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw1e293b80/images/landing/imagecontainer_fw_desktop/HERO_BANNER_DESK_HYBRID_LILAC_260924.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navingation {
+    background-image: url('https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw9b587abe/images/mozaic_vertical/W52_2023_EXPLORE_PLP_BEST_SELLERS.jpg');
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    background-color: transparent;
+    width: 100%;
+    /* transition: 1s ease-in-out; */
+    padding: 1rem;
+    line-height: 1;
+    position: relative;
+    transition: top 0.3s ease;
+    /* background-color: white; */
+    z-index: 999;
+}
+
+.nav-up-scroll {
+    background-color: white;
+    color: blue;
+}
+
+.nav-up-scroll .list a {
+    color: black;
+}
+
+.nav-up-scroll .put input {
+    color: black;
+    border-color: black;
+}
+
+.nav-up-scroll .put .Search {
+    color: black;
+}
+
+.nav-up-scroll .eng {
+    color: black;
+}
+
+.nav-up-scroll .fa-user,
+.nav-up-scroll .fa-heart {
+    color: black;
+}
+
+.nav-fixed {
+    background-color: rgba(255, 255, 255, 0.896);
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    top: -100px;
+}
+.flex img{
+    background-color: #007bff;
+    width: 50%;
+}
+.nav-up {
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+
+}
+
+.english {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-down {
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav:hover a {
+    color: black;
+}
+
+.nav:hover h1 {
+    color: black;
+}
+
+.nav:hover input::placeholder {
+    color: black;
+
+}
+
+.nav-up h1 {
+    color: white;
+}
+
+.nav:hover input {
+    border: 1px solid black;
+}
+
+.fa-regular {
+    color: white;
+}
+
+.nav input {
+    /* background-color:palevioletred ; */
+    outline: none;
+    border: 1px solid white;
+    padding: .5rem;
+    background-color: transparent;
+}
+
+.nav-input input::placeholder {
+    color: white;
+}
+
+.nav:hover span {
+    color: black;
+}
+
+.nav span {
+    color: white;
+}
+
+.nav:hover .fa-regular {
+    color: black;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-decoration: none;
+    width: 100%;
+    list-style: none;
+
+}
+
+.list a {
+    /* text-decoration: none; */
+
+}
+
+.nav-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    /* background-color: red; */
+}
+
+.lug {
+    /* background-color: red; */
+    /* height: 100px; */
+    line-height: 2;
+}
+
+.lug p:hover {
+    color: #aaaaaad7;
+
+}
+
+.luggage-links p {
+    /* background-color: red; */
+    color: #333;
+}
+
+.lug h5:hover {
+    color: #aaaaaad7;
+
+}
+
+.lug-bg {
+    background-image: url('https://www.rimowa.com/on/demandware.static/Sites-Rimowa-Site/-/en_CC/v1727431642665/images/interface/megamenu-product-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 300px; */
+    display: flex;
+    justify-content: center;
+}
+
+.luggage-hover {
+
+    display: none;
+    position: absolute;
+    /* If needed, adjust positioning */
+    top: 100%;
+    /* Make sure it's displayed below the LUGGAGE link */
+    left: 0;
+    background-color: #fff;
+    /* Adjust to your desired background */
+    z-index: 1000;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.lugggg-hov {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* position: absolute; */
+    /* bottom: 0%; */
+    width: 100%;
+    height: 600px;
+    padding: 1rem;
+    gap: 10px;
+}
+
+.see-all {
+    padding: 1rem;
+}
+
+.see-all a {
+    color: #666;
+    text-decoration: underline;
+    /* font-size: 6rem;     */
+}
+
+.hover-link {
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.lug-bg img {
+    width: 50%;
+}
+
+.lug h5 {
+    /* background-color: purple; */
+    color: #0d0900;
+}
+
+.lug p {
+    /* background-color: peru; */
+    width: 100%;
+    font-size: .7rem;
+    color: gray;
+}
+
+.colin {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* background-color: #007bff; */
+    gap: 20px;
+    padding: 1rem;
+
+}
+
+.luggage-links p {
+    color: #333;
+}
+
+.luggage-links {
+    /* background-color: peru; */
+    line-height: 2;
+}
+
+.luggage-links a {
+    color: gray;
+    text-decoration: none;
+}
+
+.luggage-links a:hover {
+    color: rgba(128, 128, 128, 0.567);
+}
+
+.nav-inside {
+    color: white;
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    bottom: 25%;
+    left: 30%;
+
+}
+
+.nav-inside2 {
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 50%;
+    left: 40%;
+}
+
+.nav-inside2 h2 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.nav-inside h2 {
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+
+}
+
+.nav-inside a {
+    color: white;
+}
+
+main {
+    /* background-color: red; */
+    margin-top: 2rem;
+}
+
+main h1 {
+    color: black;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.grid {
+    /* display: flex;
+
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); */
+    /* background-color: whitesmoke; */
+    background-image: url('https://www.rimowa.com/on/demandware.static/Sites-Rimowa-Site/-/en_CC/v1727431642665/images/interface/megamenu-product-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.grid-items {
+    /* background-color: red; */
+}
+
+.grid-items img {
+    max-width: 100%;
+    height: auto;
+}
+
+.display {
+    position: relative;
+    /* background-color: #007bff; */
+    
+}
+
+.first-img {
+    display: block;
+    /* display: none; */
+
+}
+
+.second-img {
+    display: none !important;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+
+}
+
+.display img {
+    width: 100%;
+    height: auto;
+}
+
+.display:hover .first-img {
+    display: none;
+}
+
+.display:hover .second-img {
+    display: block !important;
+     
+}
+
+
+
+.grid-22 {
+    display: grid;
+
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr) !important;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+
+.flex {
+    display: flex;
+    /* align-items: center; */
+    /* gap: 10px; */
+    /* background-color: #007bff; */
+
+}
+
+
+
+
+.flex button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+.check p {
+    /* margin-left: 10px; */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+section {
+    text-align: center;
+    width: 80%;
+    margin: 4rem auto;
+    line-height: 2.25;
+}
+
+section p {
+    color: grey;
+    /* margin-bottom: 1rem; */
+}
+
+section h1 {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.two {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    /* /* margin-top: 2rem; */
+    margin-bottom: 2rem;
+}
+
+.two a {
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.two img {
+    width: 100%;
+    height: 500px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.life {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 4rem;
+    text-align: center;
+    line-height: 1.7;
+    gap: 10px;
+    /* background-color: aqua; */
+    color: rgba(0, 0, 0, 0.6);
+    width: 90%;
+    margin: 0 auto;
+
+
+}
+
+.life a {
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.icon-border {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 15%;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+
+#wrench {
+    font-size: 40px;
+}
+
+.life-one {
+    /* background-color: red; */
+    padding: 1rem;
+}
+
+.mgb-10 {
+    margin-bottom: 2rem;
+}
+
+.vist {
+    background-image: url('https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw5376d5ba/images/stores/default/ratio3x1/HP_STORE_LOCATOR.jpg');
+    width: 100%;
+    /* height: 100vh; */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: blueviolet; */
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.291);
+    width: 100%;
+    height: 450px;
+}
+
+.vist img {
+    width: 100%;
+}
+
+.always {
+    position: absolute;
+    line-height: 2;
+    text-align: center;
+}
+
+.always a {
+    background-color: white;
+    align-items: center;
+    border: 1px solid #0000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .18em;
+
+    padding: 0 24px;
+}
+
+.always a {
+    color: #000;
+    /* overflow: hidden; */
+    text-decoration: none;
+}
+
+.always P {
+    letter-spacing: .18em;
+
+    font-size: 1rem;
+}
+
+.always h2 {
+    letter-spacing: .1em;
+    font-size: 3rem;
+}
+
+.touch {}
+
+.touch h3 {
+    /* background-color: rebeccapurple; */
+    font-size: 2rem;
+}
+
+.touch p,
+.touch h3 {
+    text-align: center;
+    /* color: white; */
+}
+
+#myForm {
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    height: 600px;
+    margin: 0 auto;
+
+}
+
+.form-two {
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    height: 400px;
+    /* margin: 0 auto; */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.touch input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.touch input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.touch p {
+    font-size: 14px;
+    color: grey;
+    /* background-color: red; */
+}
+
+.touch a {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+.touch input::placeholder {
+    color: #aaa;
+}
+
+.touch input:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.touch form {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#btnSubmit {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.check{
+    /* background-color: blue; */
+    padding: 1rem;line-height: 2;
+
+
+}
+.check a{
+    text-decoration: none;
+    color: #000;
+
+}
+
+.checks {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.check p {
+    text-align: left;
+}
+
+#checkbox {
+    margin-bottom: 1.8rem;
+}
+
+.story {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+
+}
+.autoplays{
+    /* display: flex; */
+    /* gap: 10px; */
+    width: 70%;
+    /* position: relative; */
+}
+
+.slide {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+}
+.latest{
+    /* background-color: gold; */
+    width: 30%;
+}
+.latest h1 {
+    padding: 2rem;
+    font-size: 3.4rem;
+    font-weight: 400;
+    letter-spacing: .06em;
+    line-height: 1.2;
+    /* margin-bottom: 24px; */
+    margin-top: 0;
+
+}
+.slide-2{
+    /* background-color: #007bff; */
+    display: flex;
+    gap: 10px !important;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+line-height: 1.5;
+}
+.slide-2 img {
+    width: 100%;
+}
+.slide-2 a{
+    color: #0d0900;
+    /* background-color: red; */
+
+}
+.slide-2 a:hover{
+color: #aaa;
+}
+.slide-2 p{
+    /* background-color: blue; */
+    color: #666;
+    
+}
+.spec img:hover{
+    /* background-color: #007bff; */
+    /* height: 600px; */
+}
+main h3 {
+    color: black;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: .18em;
+    line-height: 1.5;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+.gridd{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+footer {
+    background-color: black;
+    padding: 1rem;
+
+}
+
+.flex-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-up p {
+    /* background-color: palegreen; */
+}
+
+.flex-contact a {
+    text-decoration: none;
+    color: white;
+}
+
+.flex-contact a:hover {
+    color: gray;
+}
+
+.foot-up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 10px;
+
+
+}
+
+.small {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-up {
+    border-bottom: 1px solid white;
+}
+
+.footer-mid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* background-color: red; */
+    margin-top: 2rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 2rem;
+
+}
+
+.footer-mid a:hover {
+    color: gray;
+}
+
+li {
+    list-style: none;
+
+}
+
+.foot-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.foot-links p {
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.foot-links ul {
+    line-height: 1.5;
+    /* background-color: yellowgreen; */
+}
+
+.small-icon {
+    color: gray;
+    cursor: pointer;
+}
+
+.small-icon:hover {
+    background-color: gray;
+    color: gray;
+
+}
+
+.footer-down {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding-top: 2rem;
+}
+
+.point {
+    line-height: 2;
+}
+
+.put {
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.put input::placeholder {}
+
+.Search {
+    position: absolute;
+    left: 5%;
+}
+
+.put {
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.put input {
+    width: 100%;
+    padding-left: 35px;
+    /* Space between icon and text */
+    font-size: 16px;
+    /* border: none; */
+    /* outline: none; */
+}
+
+.mes{
+display: flex;
+}
+.mes p{
+    font-size: .8rem;
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+}
+
+.Search {
+    position: absolute;
+    left: 10px;
+    /* Positioning the icon properly */
+    color: #666;
+    font-size: 18px;
+}
+
+
+.autoplay {
+    /* background-color: red; */
+    /* display: flex; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* position: relative; */
+}
+
+.slick-prev {
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 19, 19);
+    color: #000;
+    /* border-radius: 10px; */
+    position: absolute; 
+    left: -50px;
+    top: 40%;
+    padding: 1.5rem;
+    border-radius: 50px;
+}
+
+.slick-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 19, 19);
+    color: #000;
+    /* border-radius: 10px; */
+    position: absolute; 
+    right: 70px;
+    top: 40%;
+    padding: 1.5rem;
+    border-radius: 50px;
+}
+.slick-prev:hover {
+    /* background-color: green; */
+    background-color: rgb(30, 19, 19);
+
+}
+
+.slick-next:hover {
+    /* background-color: green; */
+    background-color: rgb(30, 19, 19);
+
+}
+
+.img-container img {
+    width: 100%;
+    /* height: 400px; */
+
+}
+
+.img-container {
+    background-color: red;
+    display: flex;
+    /* width: 100%; */
+}

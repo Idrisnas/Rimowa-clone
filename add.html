@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/dash.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="dash.html">
+                <button class="btn-add-todo">Dash Board</button></a>
+            <a href="add.html">
+                <button class="btn-add-todo">Add product</button></a>
+            <a href="cartegory.html"> <button class="btn-add-todo">Add Category</button></a>
+        </div>
+        <div class="main-content">
+            <div class="header">My</div>
+            <form action="" id="myForm">
+                <div class="other">
+                    <div style="background-color: white; width: 100%; height: 70px; position: fixed;">
+                        <div class="nav_dash">
+                            <div style="display: flex; justify-content: right; margin-right: 20px; font-size: 1.1rem;">
+                                <p>Add Product</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="" class="form">
+
+                        <h1 style="text-align: center;">Add Product</h1>
+
+                        <p>Category Id</p>
+                        <!-- <div id="container"></div> -->
+                        <select id="select"></select>
+                        <div style="margin-top: 20px; outline: none;">
+                            <p style="margin-left: 20px;">Enter Title Name</p>
+                            <input type="text" name="title" id="one" placeholder="Enter Title Name"
+                                style="width: 90%; height: 35px; margin-left: 20px; outline: none;">
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <p style="margin-left: 20px; outline: none;">Description</p>
+                            <textarea name="descp" id="two"
+                                style="width: 90%; height: 40px; margin-left: 20px; outline: none;"></textarea>
+                        </div>
+                        <div style="display: flex; gap: 20px; margin-top: 20px;">
+                            <div>
+                                <p style="margin-left: 20px;">Price</p>
+                                <input type="number" name="price" id="three" placeholder="Price"
+                                    style="width: 400px; height: 35px; margin-left: 20px; outline: none;">
+                            </div>
+                            <div>
+                                <p style="margin-left: 20px;">Brand</p>
+                                <input type="text" name="brand" id="four" placeholder="Brand Name"
+                                    style="width: 230px; height: 35px; margin-left: 20px; outline: none;">
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 20px; margin-top: 20px;">
+                            <div>
+                                <p style="margin-left: 20px;">Quantity</p>
+                                <input type="number" name="quantity" id="five" placeholder="Quantity"
+                                    style="width: 400px; height: 35px; margin-left: 20px; outline: none;">
+                            </div>
+                            <div id="image-container">
+                                <div>
+                                    <p style="margin-left: 20px;">Image URL</p>
+                                    <input type="text" name="images[]" class="image-url" placeholder="Enter Image URL"
+                                        style="width: 230px; height: 35px; background-color: white; margin-left: 20px; outline: none;" />
+                                </div>
+                            </div>
+                            <button type="button" id="add-image-url" style="margin-left: 20px;">Add another image</button>
+                            
+                            <!-- <div>
+                                <p style="margin-left: 20px;">Image</p>
+                                <input type="text" name="images" id="six" placeholder="image url"
+                                    style="width: 230px; height: 55px; background-color: white; margin-left: 20px; outline: none;">
+                            </div> -->
+                        </div>
+                        <div style="display: flex; gap: 20px; margin-top: 20px;">
+                            <div>
+                                <p style="margin-left: 20px;">Currency</p>
+                                <select name="currency" id="seven"
+                                    style="width: 400px; height: 43px; margin-left: 20px; outline: none;">
+                                    <option value="">Select currency</option>
+                                    <option value="NGN">Naira(NGN)</option>
+                                    <!-- <option value="">Dollar($)</option>
+                                <option value="3">Euro(£)</option> -->
+                                </select>
+                            </div>
+                            <div>
+                                <p style="margin-left: 20px;">min Qty</p>
+                                <input type="number" name="min_qty" id="eight" placeholder="Min Qty"
+                                    style="width: 230px; height: 35px; margin-left: 20px; outline: none;">
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 20px; margin-top: 20px;">
+                            <div>
+                                <p style="margin-left: 20px;">Max Qty</p>
+                                <input type="number" name="max_qty" id="nine" placeholder="Max Qty"
+                                    style="width: 300px; height: 35px; margin-left: 20px; outline: none;">
+                            </div>
+                            <div>
+                                <p style="margin-left: 20px;">Discount</p>
+                                <input type="number" name="discount" id="ten" placeholder="Discount"
+                                    style="width: 300px; height: 35px; margin-left: 20px; outline: none;">
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 0px; margin-top: 20px;">
+                            <div style="margin-left: 20px;">
+                                <p>Refund Policy</p>
+                                <select name="has_refund_policy" id="eleven"
+                                    style="width: 120px; height: 40px; outline: none;">
+                                    <option value="">Select</option>
+                                    <!-- <option value="true">True</option> -->
+                                    <option value="false">False</option>
+                                </select>
+                            </div>
+                            <div style="margin-left: 20px;">
+                                <p>Has Discount</p>
+                                <select name="has_discount" id="twelve"
+                                    style="width: 120px; height: 40px; outline: none;">
+                                    <option value="">Select</option>
+                                    <!-- <option value="true">True</option> -->
+                                    <option value="false">False</option>
+                                </select>
+                            </div>
+                            <div style="margin-left: 20px;">
+                                <p>Has Shipment</p>
+                                <select name="has_shipment" id="thirteen"
+                                    style="width: 120px; height: 40px; outline: none;">
+                                    <option value="">Select</option>
+                                    <option value="true">True</option>
+                                    <!-- <option value="false">False</option> -->
+                                </select>
+                            </div>
+                            <div style="margin-left: 20px;">
+                                <p>Refund Policy</p>
+                                <select name="has_variation" id="fourteen"
+                                    style="width: 120px; height: 40px; outline: none;">
+                                    <option value="">Select</option>
+                                    <!-- <option value="true">True</option> -->
+                                    <option value="false">False</option>
+                                </select>
+                            </div>
+                            <div style="margin-left: 20px;">
+                                <p>Shipping Location</p>
+                                <select name="shipping_locations" id="fifteen"
+                                    style="width: 120px; height: 40px; outline: none;">
+                                    <option value="">Select</option>
+                                    <option value="1">Ghana</option>
+                                    <option value="2">Nigeria</option>
+                                    <option value="2">Egypt</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 20px; margin-top: 20px; margin-left: 20px;">
+                            <!-- <div>
+                            <p>Merchant Id</p>
+                            <input type="text" name="merchant_Id" id="sixteen" placeholder="Enter merchant Id"
+                                style="width: 320px; height: 35px;  outline: none;">
+                        </div> -->
+
+                        </div>
+
+                        <button id="form"
+                            style="width: 80px; border-radius: 10px; height: 30px; border: none; background-color: black; color: white; margin-left: 20px; margin-top: 20px;">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+      $(document).ready(function () {
+    let categoryId;
+
+    // Function to dynamically add new image URL input field
+    $('#add-image-url').on('click', function () {
+        $('#image-container').append(`
+            <div>
+                <p style="margin-left: 20px;">Image URL</p>
+                <input type="text" name="images[]" class="image-url" placeholder="Enter Image URL"
+                    style="width: 230px; height: 35px; background-color: white; margin-left: 20px; outline: none;" />
+            </div>
+        `);
+    });
+
+    function getAllCat() {
+        let merchant = localStorage.getItem("user");
+        fetch(`http://ecommerce.reworkstaging.name.ng/v2/categories?merchant_id=${merchant}`)
+            .then((res) => res.json())
+            .then((res) => {
+                let select = $("#select");
+                select.empty();
+                if (res.length === 0) {
+                    select.append("<option>No categories available</option>");
+                    return;
+                }
+                res.forEach((e) => {
+                    let option = `<option value='${e.name}' data-id='${e.id}'>${e.name}</option>`;
+                    select.append(option);
+                });
+            })
+            .catch((error) => console.error("Error fetching categories:", error));
+    }
+
+    function handleOptionClick() {
+        const selectedId = $("#select option:selected").data("id");
+        categoryId = selectedId;
+    }
+
+    $("#select").on("change", handleOptionClick);
+    getAllCat();
+
+    $('#form').on('click', function (e) {
+        e.preventDefault();
+
+        let imageUrls = [];
+        $('.image-url').each(function () {
+            imageUrls.push($(this).val());
+        });
+
+        let formData = {
+            title: $('#one').val(),
+            descp: $('#two').val(),
+            price: $('#three').val(),
+            brand: $('#four').val(),
+            quantity: $('#five').val(),
+            images: imageUrls, 
+            currency: $('#seven').val(),
+            min_qty: $('#eight').val(),
+            max_qty: $('#nine').val(),
+            discount: $('#ten').val(),
+            has_refund_policy: $('#eleven').val(),
+            has_discount: $('#twelve').val(),
+            has_shipment: $('#thirteen').val(),
+            has_variation: $('#fourteen').val(),
+            shipping_locations: $('#fifteen').val(),
+            merchant_id: localStorage.getItem('user'),
+            category_id: categoryId,
+        };
+
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+    products.push(formData); 
+    localStorage.setItem('products', JSON.stringify(products));
+
+        $.ajax({
+            url: 'http://ecommerce.reworkstaging.name.ng/v2/products',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
+            success: function (res) {
+                alert('Product added successfully');
+                console.log(res);
+                // location.reload();
+            },
+            error: function (error) {
+                console.log(error);
+                alert('Failed to add product');
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+
+</html>

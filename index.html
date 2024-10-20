@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/show.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <title>Rimowa</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <div class="nav-up">
+                <div class="english">
+                    <a href="#" class="eng">International</a><span>|</span>
+                    <a href="#" class="eng">English</a>
+                </div>
+                <div>
+                    <h1 class="eng"><a href="index.html">RIMOWA</a></h1>
+
+                </div>
+                <div class="nav-input">
+                    <div class="put">
+                        <i class="fa-solid fa-magnifying-glass Search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <i class="fa-regular fa-user cursor" id="user"></i>
+                    <div class="account" id="account">
+
+                        <h1>My Account</h1>
+                        <div class="log">
+                            <a href="login.html">
+                                <button class="signin">SIGN IN</button></a>
+
+                            <a href="signup.html">
+                                <button class="signup">CREATE AN ACCOUNT</button></a>
+                        </div>
+                        <div class="acct-links">
+                            <ul>
+                                <li><a href=""> My Orders</a></li>
+                                <li><a href="">Return a product</a></li>
+                                <li><a href="">Track an order</a></li>
+                                <li><a href="">Track an return</a></li>
+                                <li><a href="">Register your RIMOWA luggage</a></li>
+
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <div class="icon">
+                        <div class="count" id="count"></div>
+
+                        <a href="#" id="cartLink">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+
+                    <div id="cartModal" class="cart-modal">
+                        <h2>Your Cart</h2>
+                        <div id="cartItems"></div>
+
+                        <div id="cartSummary"></div>
+                        <button id="closeCart">Close</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="nav-down">
+                <ul class="list">
+                    <li><a href="#">NEW</a></li>
+
+                    <li>
+                        <a href="shop.html" id="luggage-link">LUGGAGE</a>
+                        <div class="luggage-hover">
+                            <div class="lugggg-hov">
+                                <div>
+                                    <div class="hover-link">
+                                        <div class="luggage-links">
+                                            <p>CATEGORIES</p>
+                                            <ul>
+                                                <li><a href="#">Best-Sellers</a></li>
+                                                <li><a href="#">Check-In</a></li>
+                                                <li><a href="#">Cabin</a></li>
+                                                <li><a href="#">Trunk</a></li>
+                                                <li><a href="shop.html">See all luggage</a></li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="luggage-links">
+                                            <p>TRAVEL TYPE</p>
+                                            <ul>
+                                                <li><a href="#">lonh haul</a></li>
+                                                <li><a href="#">Short trip</a></li>
+                                                <li><a href="#">Business selection</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="luggage-links">
+                                            <p>MOST POPULAR</p>
+                                            <ul>
+                                                <li><a href="#"> Green luggage</a></li>
+                                                <li><a href="#"> Green luggage</a></li>
+                                                <li><a href="#"> Black luggage</a></li>
+                                                <li><a href="#">Silver luggage</a></li>
+                                                <li><a href="#">See all luggage</a></li>
+                                                <li><a href="#">Aluminium</a></li>
+                                                <li><a href="#">Polycarbonate</a></li>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="luggage-links">
+                                            <p>FEATURED</p>
+                                            <ul>
+                                                <li><a href="#"> Hybrid Lilac purple</a></li>
+                                                <li><a href="#">Gift guide</a></li>
+                                                <li><a href="#">Leather</a></li>
+                                                <li><a href="#">Trunk</a></li>
+                                                <li><a href="#">Customise</a></li>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="colin">
+                                        <div class="lug">
+                                            <div class="lug-bg">
+                                                <a href="original.html">
+                                                    <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw6031e569/images/product/small/MM_THUMBNAILS_ORIGINAL.png"
+                                                        alt=""></a>
+                                            </div>
+                                            <h5><a href="original.html">Original</a></h5>
+                                            <p>The aluminium icon</p>
+                                        </div>
+
+                                        <div class="lug">
+                                            <div class="lug-bg">
+                                                <a href="hybrid.html">
+                                                    <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw7ac2b2f2/images/product/small/MM_LUGGAGES_HYBRID_LILAC_260924.png"
+                                                        alt=""></a>
+                                            </div>
+                                            <h5><a href="hybrid.html">Hybrid</a></h5>
+                                            <p>An aluminium and polycarbonate union
+                                            </p>
+                                        </div>
+                                        <div class="lug">
+                                            <div class="lug-bg">
+                                                <a href="distinct.html">
+                                                    <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw548abd73/images/product/small/W48_2023_MM_LUGGAGE_DISTINCT.png"
+                                                        alt=""></a>
+                                            </div>
+                                            <h5><a href="distinct.html">Distinct</a></h5>
+                                            <p>An elegant leather cabin</p>
+                                        </div>
+                                        <div class="lug">
+                                            <div class="lug-bg">
+                                                <a href="essential.html">
+                                                    <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dwe0848e47/images/product/small/ESSENTIAL_RED_THUMBNAIL_LUGGAGES_290824.png"
+                                                        alt=""></a>
+                                            </div>
+                                            <h5><a href="essential.html">Essential</a></h5>
+                                            <p>Practical and lightweight polycarbonate</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="colin">
+                                        <div class="lug">
+                                            <div class="lug-bg">
+                                                <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw481d3fc8/images/product/small/2023_MM_LUGGAGE_SLEEVE_SLATE_NEW.png"
+                                                    alt="">
+                                            </div>
+                                            <h5>Original</h5>
+                                            <p>The aluminium icon</p>
+                                        </div>
+
+                                        <div class="lug">
+                                            <div class="lug-bg">
+                                                <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dwc4ec13be/images/product/small/MM_THUMBNAILS_CLASSIC.png"
+                                                    alt="">
+                                            </div>
+                                            <h5>Essential Lite</h5>
+                                            <p>Exceptionally lightweight polycarbonate
+                                            </p>
+                                        </div>
+
+                                        <div class="lug">
+                                            <div class="lug-bg">
+                                                <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw4dec1af1/images/product/small/MM_THUMBNAILS_LITE.png"
+                                                    alt="">
+                                            </div>
+                                            <h5>Essential Sleeve
+                                            </h5>
+                                            <p>The versatile cabin companion
+                                            </p>
+                                        </div>
+
+                                        <div class="lug">
+                                            <div class="lug-bg">
+                                                <img src="" alt="">
+                                            </div>
+                                            <h5>Original</h5>
+                                            <p>The aluminium icon</p>
+                                        </div>
+                                    </div>
+                                    <div class="see-all">
+                                        <a href="shop.html">See all collection</a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="#">BAGS</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">SPECIALITIES</a></li>
+                    <li><a href="#">CUSTOMISE</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">DISCOVER</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="nav-inside">
+            <h2>Introducing:</h2>
+            <h2>Hybrid in Lilac purple</h2>
+            <a href="#">DISCOVER</a>
+        </div>
+    </nav>
+
+
+    <!-- <div id="product-list">
+        <h2>Products Added:</h2>
+        <div id="products-container"></div>
+    </div> -->
+
+
+
+    <main>
+        <h1>Iconic products</h1>
+        <div class="autoplay">
+
+            <div class="grid-items">
+                <div class="display grid">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwb1aaf8bc/images/medium/88373751_1.png"
+                        alt="" class="first-img">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw1754d0f6/images/medium/88373751_2.png"
+                        alt="second-img" class="second-img">
+                </div>
+
+
+                <div class="check">
+                    <a href="#">Hybrid Check-In L</a>
+                    <div class="flex">
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw70c27f2a/images/swatch/steel_blue.jpg"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwf6d1c11c/images/swatch/allwhite_gloss.png"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw58b47acf/images/swatch/black.png"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+                        <p>+1</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid-items">
+                <div class="display grid"><img
+                        src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwf3976cb9/images/medium/92553004_1.png"
+                        alt="" class="first-img">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw11a14937/images/medium/92553004_2.png"
+                        alt="" class="second-img">
+                </div>
+                <div class="check">
+                    <a href="#">Original Cabin</a>
+                    <div class="flex">
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwf6d1c11c/images/swatch/allwhite_gloss.png"
+                                <img src="" alt="">
+                        </button>
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwed7120bc/images/swatch/green_gloss.png"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw2c8669a8/images/swatch/SWATCH_IPHONE16_MATTEBLACK.jpg"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+                        <p>+2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-items">
+                <div class="display grid"><img
+                        src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw8a170369/images/medium/93090001_1.png"
+                        alt="" class="first-img">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwe20a21e7/images/medium/93090001_2.png"
+                        alt="" class="second-img">
+                </div>
+
+                <div class="check">
+                    <a href="#">Original Bag-Aluminium Cross-Body Bag</a>
+                    <div class="flex">
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw80d95ca1/images/swatch/SWATCH_COLOUR_handclutch_silver.png"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw66ecb245/images/swatch/SWATCH_COLOUR_handclutch_black.png"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid-items">
+
+                <div class="display grid"><img
+                        src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwc134f48e/images/medium/88353751_1.png"
+                        alt="" class="first-img">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwff0112f9/images/medium/88353751_2.png"
+                        alt="" class="second-img">
+
+                </div>
+                <div class="check">
+                    <a href="#">Hybrid Cabin</a>
+                    <div class="flex">
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw70c27f2a/images/swatch/steel_blue.jpg"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwf6d1c11c/images/swatch/allwhite_gloss.png"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw58b47acf/images/swatch/black.png"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+                        <p>+1</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="grid-items">
+                <div class="display grid"><img
+                        src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw8a170369/images/medium/93090001_1.png"
+                        alt="" class="first-img">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwe20a21e7/images/medium/93090001_2.png"
+                        alt="" class="second-img">
+                </div>
+                <div class="check">
+                    <a href="#">Essential Check-In M</a>
+                    <div class="flex">
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwd9d33c1c/images/swatch/SWATCH_IPHONE16_GREEN.jpg"
+                                alt="">
+
+                        </button>
+
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw0a464716/images/swatch/SWATCH_Papaya_Suitcase.jpg"
+                                alt="">
+                        </button>
+                        <button>
+                            <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw754d3ce0/images/swatch/SWATCH_IPHONE16_IRIDESCENT.jpg"
+                                alt="">
+                            <img src="" alt="">
+                        </button>
+
+                        <P>+2</P>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </main>
+
+    <section>
+        <p>Categories</p>
+        <h1>Find a match for every kind of journey</h1>
+        <div class="two">
+            <div class="spec">
+                <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw3b751cb0/images/landing/sidebysidetext/HP_VERTICAL_HYBRIS_LILAC_COMINGSOON_190924.jpg"
+                    alt="">
+                <a href="">SEE ALL LUGGAGE</a>
+            </div>
+            <div class="spec">
+                <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw126e36c9/images/landing/sidebysidetext/HP_VERTICAL_ALL_BAGS_OB_120924.jpg"
+                    alt="">
+                <a href="">SEE ALL BAGS</a>
+            </div>
+        </div>
+        <div class="two">
+            <div class="spec">
+                <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw7a14544c/images/landing/sidebysidetext/HP_VERTICAL_IPHONE16_160924.jpg"
+                    alt="">
+                <a href="">SEE ALL ACCESSORIES</a>
+            </div>
+            <div class="spec">
+                <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw33f80c30/images/landing/sidebysidetext/HP_VERTICAL_ALLSPECIALTIES_EUROPE_0608.jpg"
+                    alt="">
+                <a href="">SEE ALL SPECIALITIES</a>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section>
+        <p>Campaign</p>
+        <h1>Engineered for life</h1>
+        <div class="video-container">
+            <video controls autoplay muted loop>
+                <source
+                    src="https://www.rimowa.com/videos/homepage/2024/Q3/W33/funlux3_organic_hero_16x9.mp4?loc=external&signature=2c7c73f054197c5128a39063ab591adc7c7c26520b514158154920245359f3f3"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        </div>
+    </section>
+
+    <div class="life">
+        <div class="life-one">
+            <div class="icon-border">
+                <i class="fa-solid fa-infinity" id="wrench"></i>
+            </div>
+            <p> Lifetime guarantee</p>
+            <p> On all functional damage to your suitcase</p>
+            <a href="#">Discover</a>
+        </div>
+        <div class="life-one">
+            <div class="icon-border">
+                <i class="fa-solid fa-wrench" id="wrench"></i>
+            </div>
+            <p>Worldwide repairs</p>
+            <p>Access a network of over 120 repair points around the world</p>
+            <a href="#">Discover</a>
+        </div>
+        <div class="life-one">
+            <div class="icon-border">
+                <i class="fa-solid fa-rotate" id="wrench"></i>
+            </div>
+
+            <p>Free returns</p>
+            <p>Benefit from a prepaid label for returns within 30 days</p>
+            <a href="#">Discover</a>
+        </div>
+        <div class="life-one">
+            <div class="icon-border">
+                <i class="fa-solid fa-pen-nib" id="wrench"></i>
+            </div>
+
+            <p>RIMOWA Unique</p>
+            <p class="mgb-10">Customise your Classic suitcase</p>
+            <a href="#">Discover</a>
+        </div>
+    </div>
+
+    <div class="vist">
+        <div class="overlay"></div>
+        <!-- <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw5376d5ba/images/stores/default/ratio3x1/HP_STORE_LOCATOR.jpg" alt=""> -->
+        <div class="always">
+            <p>ALWAYS WITHIN REACH
+            </p>
+            <h2> Visit us in store</h2>
+            <a href="#">FIND A STORE</a>
+        </div>
+    </div>
+    <div class="touch">
+
+
+        <p>GET IN TOUCH</p>
+        <H3>Sign up for our Newsletter</H3>
+
+        <form action="" id="myForm">
+            <label for="">Email Address
+                <input type="text" placeholder="Enter a valid Email">
+
+            </label>
+            <label for="">Civility
+                <select name="" id="">
+                    <option value="" disabled>Select...</option>
+                    <option value="">Mr</option>
+                    <option value="">Mrs</option>
+                    <option value="">Ms</option>
+                    <option value="">Mx</option>
+                    <option value="">Prefer not to say</option>
+                    <option value=""></option>
+
+                </select>
+            </label>
+            <div class="flex">
+                <label for="">First Name
+                    <input type="text">
+                </label>
+                <label for="">Last Name
+                    <input type="text">
+                </label>
+            </div>
+            <label for="">Country/Region
+                <select name="" id="countrySelect">
+                    <option value="" disabled>Select a country</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="AG">Antigua and Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                </select>
+            </label>
+            <div class="checks">
+                <input type="checkbox" name="" id="checkbox">
+                <p>I consent to RIMOWA processing my personal data in order to send me personalized marketing material
+                    and to share my personal data with RIMOWA’s marketing partners in accordance with the <a
+                        href="#">consent form</a> and the <a href="#">privacy policy</a>.
+                </p>
+            </div>
+            <button id="btnSubmit">Submit</button>
+        </form>
+
+    </div>
+    <main>
+        <h3>STORIES</h3>
+        <div class="story">
+            <div class="latest">
+                <H1>Our Latest news and views</H1>
+            </div>
+            <div class="autoplays">
+                <div class="slide-2">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw1fa0f100/images/landing/image_medium_4x5/HP_NEWS_CARROUSEL_KISHO_KUROKAWA_1.jpg"
+                        alt="">
+                    <p>VI - INSIDE MAINTOGA, A MASTERPLAY BETWEEN NATURE AND MODERN</p>
+                    <a href="#">READ</a>
+                </div>
+                <div class="slide-2">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw2c35fe28/images/landing/image_medium_4x5/HP_NEWS_CARROUSEL_AIME_LEON_DORE_2.jpg"
+                        alt="">
+                    <p>RIMOWA X AIME LEON DORE: EMBRACING THE GOLDEN AGE OF TRAVEL</p>
+                    <a href="#">READ</a>
+                </div>
+
+                <div class="slide-2">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw55a5a5c7/images/landing/image_medium_4x5/HP_NEWS_CARROUSEL_DESIGN_PRIZE_3.jpg"
+                        alt="">
+                    <p>RIMOWA DESIGN PRIZE 2024-WINNING PROJECTS</p>
+                    <a href="#">READ</a>
+                </div>
+
+                <div class="slide-2">
+                    <img src="https://www.rimowa.com/on/demandware.static/-/Library-Sites-RimowaSharedLibrary/default/dw060cf73c/images/landing/image_medium_4x5/HP_NEWS_CARROUSEL_JOZEF_SCHELLEKENS_4.jpg"
+                        alt="">
+                    <p>VI - INSIDE JOZEF SCHELLEKENS HOUSE- A MODERNIST TOUR DE FORCE</p>
+                    <a href="#">READ</a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+    <footer>
+        <div class="footer-up">
+            <p style="color: gray;">CAN WE HELP?</p>
+            <div class="foot-up">
+                <p style="color: white;">Please get in touch by phone or email
+
+                </p>
+                <div class="flex-contact">
+                    <div class="small">
+
+
+                        <i class="fa-solid fa-phone" style="color: white;"></i>
+                        <a href="#">+44 207660 0546</a>
+                    </div>
+                    <div class="small">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="#">Contact Us</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-mid">
+            <div class="foot-links">
+                <p>PROCUCTS</p>
+                <ul>
+                    <li><a href="#">Original</a></li>
+                    <li><a href="#">Essential</a></li>
+                    <li><a href="#">Essential Lite</a></li>
+                    <li><a href="#">Essential Sleeve</a></li>
+                    <li><a href="#">Hybrid</a></li>
+                    <li><a href="#">Classic</a></li>
+                    <li><a href="#">Distinct</a></li>
+                    <li><a href="#">Never Still</a></li>
+                    <li><a href="#">Personal</a></li>
+                    <li><a href="#">Signature</a></li>
+                    <li><a href="#">Attach</a></li>
+                </ul>
+            </div>
+
+            <div class="foot-links">
+                <p>RINOWA</p>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">All products</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="foot-links">
+                <p>SUPPORT</p>
+                <ul>
+                    <li><a href="#"> Contact Us</a></li>
+                    <li><a href="#">Create an Account</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">How to set the locks on my RIMOWA suitcase</a></li>
+                    <li><a href="#">Register my RIMOWA</a></li>
+                    <li><a href="#">Track an Order</a></li>
+                    <li><a href="#">Track a Return</a></li>
+                </ul>
+            </div>
+
+
+            <div class="foot-links">
+                <p>Legal
+                </p>
+                <ul>
+                    <li><a href="#"> Data Protection</a></li>
+                    <li><a href="#"> Terms & Conditions</a></li>
+                    <li><a href="#"> Return Policy</a></li>
+                    <li><a href="#">Imprint</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Cookie Management</a></li>
+                </ul>
+            </div>
+            <div class="foot-links">
+                <p>FOLLOW US</p>
+                <div class="small">
+                    <i class="fa-brands fa-instagram small-icon" style="color: white;"></i>
+                    <i class="fa-brands fa-youtube small-icon" style="color: white;"></i>
+                    <i class="fa-brands fa-facebook-f small-icon" style="color: white;"></i>
+                    <i class="fa-brands fa-twitter small-icon" style="color: white;"></i>
+                    <i class="fa-brands fa-linkedin small-icon" style="color: white;"></i>
+
+                    <i class="fa-brands fa-weibo small-icon" style="color: white;"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-down">
+            <div class="point">
+                <p>INTERNATIONAL</p>
+                <P>ENGLISH</P>
+            </div>
+            <img src="https://www.rimowa.com/on/demandware.static/Sites-Rimowa-Site/-/en_CC/v1727464027316/images/ajax-loader.gif"
+                alt="">
+
+            <div>
+                <p>© 2024 RIMOWA - All rights reserved</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/cart.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.autoplay').slick({
+                dots: false,
+                infinite: true,
+                speed: 1000,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+            });
+            $('.autoplays').slick({
+                dots: false,
+                infinite: true,
+                speed: 1000,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+            });
+
+
+
+          
+
+        });
+
+
+        let lastScrollTop = 0;
+        let nav = document.querySelector('.nav');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop < lastScrollTop) {
+                // Scroll up
+                nav.classList.add('nav-fixed');
+                nav.classList.add('nav-up-scroll');
+                nav.classList.remove('hidden');
+            } else {
+                // Scroll down
+                if (scrollTop > 100) {
+                    nav.classList.add('hidden');
+                }
+                nav.classList.remove('nav-fixed');
+                nav.classList.remove('nav-up-scroll');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const luggageLink = document.getElementById('luggage-link');
+            const luggageHover = document.querySelector('.luggage-hover');
+
+            luggageLink.addEventListener('mouseenter', function () {
+                luggageHover.style.display = 'block';
+            });
+
+
+            luggageLink.addEventListener('mouseleave', function () {
+
+                setTimeout(function () {
+                    if (!luggageHover.matches(':hover')) {
+                        luggageHover.style.display = 'none';
+                    }
+                }, 100);
+            });
+
+            luggageHover.addEventListener('mouseenter', function () {
+                luggageHover.style.display = 'block';
+            });
+
+            luggageHover.addEventListener('mouseleave', function () {
+                luggageHover.style.display = 'none';
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const luggageLink = document.getElementById('user');
+            const luggageHover = document.querySelector('.account');
+
+            luggageLink.addEventListener('mouseenter', function () {
+                luggageHover.style.display = 'block';
+            });
+
+
+            luggageLink.addEventListener('mouseleave', function () {
+
+                setTimeout(function () {
+                    if (!luggageHover.matches(':hover')) {
+                        luggageHover.style.display = 'none';
+                    }
+                }, 100);
+            });
+
+            luggageHover.addEventListener('mouseenter', function () {
+                luggageHover.style.display = 'block';
+            });
+
+            luggageHover.addEventListener('mouseleave', function () {
+                luggageHover.style.display = 'none';
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

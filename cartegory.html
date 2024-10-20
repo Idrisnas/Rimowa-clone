@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/dash.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="dash.html">
+                <button class="btn-add-todo">Dash Board</button></a>
+            <a href="add.html">
+                <button class="btn-add-todo">Add product</button></a>
+            <a href="cartegory.html"> <button class="btn-add-todo">Add Category</button></a>
+
+            <div id="Categories">
+                <div> <input type="text" name="name" id="name1">
+                </div>
+
+                <div>
+                    <input type="text" name="image" id="image" placeholder="image url">
+                </div>
+
+
+                <div>
+                    <button id="btn">Add</button>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="main-content">
+            <div class="header">My</div>
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            let btn = $('#btn');
+
+
+            //     function displayCategories() {
+            //     let categories = JSON.parse(localStorage.getItem('categories')) || [];
+            //     console.log("Saved categories:", categories);
+            // }
+
+            // displayCategories();
+
+            btn.on('click', function () {
+                let image = $('#image').val()
+                let name1 = $('#name1').val()
+                let id = localStorage.getItem('user')
+
+                // let data = {
+                //     image: image,
+                //     name: name1,
+                //     merchant_id: id,
+                // }
+
+                // let categories = JSON.parse(localStorage.getItem('categories')) || [];
+                // categories.push(newCategory);
+                // localStorage.setItem('categories', JSON.stringify(categories));
+
+                // console.log("New category added:", newCategory);
+                // console.log(data)
+
+                $.ajax({
+                    url: 'http://ecommerce.reworkstaging.name.ng/v2/categories',
+                    type: 'POST',
+                    contentType: "application/json",
+                    // data: data,
+                    data: JSON.stringify({
+                        name: name1,
+                        image: image,
+                        merchant_id: id,
+                    }),
+
+                    // processData: false,
+                    success: function (res) {
+                        console.log(res)
+                        alert('Successful')
+                       
+                    },
+                    error: function (error) {
+                        console.log(error)
+                        alert('failed to add category')
+                        // console.log(error)
+                    }
+                })
+            })
+
+        })
+    </script>
+</body>
+
+</html>

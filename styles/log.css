@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+label{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: brown;
+    /* margin-bottom: 1rem; */
+    margin-top: 1rem;
+}
+.container{
+    /* background-color: aquamarine; */
+    background-color: antiquewhite;
+
+    width: 50%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    padding: 1rem;
+
+}
+input{
+    /* margin-top: 1rem; */
+    padding: 10px;
+    outline: none;
+}
+::placeholder{
+    color: greenyellow;
+}
+#inputName{
+    width: 100%;
+
+}
+
+button{
+    background-color: orangered;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+}
+button:hover{
+    background-color: brown;
+    color: black;
+}
+#show{
+    color: brown;
+}
+.error{
+    color: red;
+    /* background-color: blue; */
+    margin-bottom: 1rem;
+}
+#inputPassword{
+    /* background-color: red; */
+    /* position: relative; */
+
+}
+.password-wrapper {
+    /* margin: 0; */
+    /* position: relative; */
+    display: inline-block;
+    /* margin-top: 1rem; */
+    margin-bottom: 1rem;
+
+
+    /* width: 100%; */
+}
+p{
+margin-top: 1rem;
+
+}
+.signup{
+text-decoration: none;
+
+}
+.signup:hover{
+    text-decoration: underline;
+    color: orangered;
+    
+    }
+
+.relative{
+    position: relative;
+    display: flex;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+}
+
+ .eye {
+    position: absolute;
+    right: 2%;
+    /* bottom: 43%; */
+    /* transform: translateY(-50%); */
+    cursor: pointer;
+    color: #999;
+}
+
+ .eye:hover {
+    color: #333;
+}
+
+.pasxsword-wrapper input:focus + .eye {
+    color: #333;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<!-- <link rel="stylesheet" href="style.css"/> -->
+</head>
+<body>
+  <div>
+    <form id="create">
+      <div>
+        <select id="category"></select>
+      </div>
+      <div>
+        <input type="text" name="title" id="title"/>
+      </div>
+       <div>
+        <input type="text" name="body" id="body"/>
+      </div>
+      <button>Submit</button>
+    </form>
+  </div>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <!-- <script src="create.js"></script> -->
+  <script>
+    $(document).ready(function(){
+  let merchant = localStorage.getItem("user");
+  console.log(merchant)
+
+  function getCategory(){
+    $.ajax({
+      type:'get',
+      url:`http://ecommerce.reworkstaging.name.ng/v2/categories?merchant_id=${merchant}`,
+      success:function(res){
+        let html_content =""
+        for(let value of res){
+          html_content += `<option>${value.username}</option>`
+        }
+        $('#category').html(html_content)
+      }
+    })
+  }
+  
+  $('#create').submit(function(e){
+    e.preventDefault()
+    let payload = {
+      category_id: $("#category").val(),
+      title:$("#title").val(),
+      body:$("#body").val()
+    }
+    
+    $.ajax({
+      type:"post",
+      url:"https://jsonplaceholder.typicode.com/posts",
+      data:payload,
+      success:function(res){
+          
+          if(res.id){
+            alert("Product added")
+          }
+      },
+      error:function(err){
+        
+      }
+    })
+    
+    console.log(payload)
+  })
+  
+  getCategory()
+})
+  </script>
+</body>
+</html>

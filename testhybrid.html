@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="styles/product.css">
+        <link rel="stylesheet" href="styles/media.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/show.css">
+    
+    
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    
+    
+        <title>Rimowa Shop</title>
+    </head>
+<body>
+
+
+    <div class="fixed">
+        <div class="nav navv" style="background-color: rgba(0, 0, 0, 0.668);">
+            <div class="nav-up">
+                <div class="english">
+                    <a href="#" class="eng">International</a><span>|</span>
+                    <a href="#" class="eng">English</a>
+                </div>
+                <div>
+                    <h1 class="eng"><a href="index.html">RIMOWA</a></h1>
+
+                </div>
+                <div class="nav-input">
+                    <div class="put">
+                        <i class="fa-solid fa-magnifying-glass Search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <div class="icon">
+                        <div class="count" id="count"></div>
+
+                        <a href="#" id="cartLink">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+
+                    <div id="cartModal" class="cart-modal">
+                        <h2>Your Cart</h2>
+                        <div id="cartItems"></div>
+
+                        <div id="cartSummary"></div>
+                        <button id="closeCart">Close</button>
+                    </div>
+
+                </div>
+
+            </div>
+           
+        </div>
+
+
+
+
+
+
+
+    </div>
+    
+
+
+    <div id="product-details"></div>
+
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/cart.js"></script> -->
+    
+    <script>
+        $(document).ready(function () {
+            // Load selected product details from localStorage
+            let product = localStorage.getItem('selectedProduct');
+            if (product) {
+                product = JSON.parse(product);
+        
+                if (!product.currency || !product.price) {
+                    console.error('Product currency or price is missing');
+                }
+        
+                let firstImage = product.images[0];
+                let secondImage = product.images[1];
+                let thirdImage = product.images[2]
+                let fourtImage = product.images[3]
+                let fiftImage = product.images[4]
+                let sixthImage = product.images[5]
+                let seventhImage = product.images[6]
+                let eightImage = product.images[7]
+                let ninethImage = product.images[8]
+                let tenthImage = product.images[9]
+                // let productCurrency = product.currency ;
+                let productCurrency = product.currency;
+        
+                // Display product details
+                let productDetails = `
+                  <main>
+    <div class="flex-links">
+        <a href="">LUGGAGE</a>
+        <i class="fa-solid fa-circle"></i>
+        <a href="">COLLECTION</a>
+        <i class="fa-solid fa-circle"></i>
+        <a href="">${product.brand}</a>
+        <i class="fa-solid fa-circle"></i>
+        <P>${product.title}</P>
+    </div>
+
+    <div class="grid-2">
+
+        <div class="here">
+            <div class="grid" style="padding: 1rem;">
+                <div class="flex-bet">
+                    <p>New</p>
+                    <div class="thre-D">
+                        <img src="img/Screenshot 2024-10-01 043459.png" alt="3D">
+                        <!-- <p>try in 3D</p> -->
+                    </div>
+                </div>
+               <div class="grid bg">
+    <img id="image" src="${firstImage}" alt="${product.title}">
+</div>
+
+            </div>
+            <div class="grid-2">
+                <div class="grid bg">
+                    <img src="${secondImage}" alt="${product.title}">
+                </div>
+                <div class="grid bg">
+                    <img src="${thirdImage}" alt="${product.title}">
+                </div>
+            </div>
+            <div class="grid bg">
+               <img src="${fourtImage}" alt="${product.title}">
+            </div>
+            <div class="grid bg">
+               <img src="${fiftImage}" alt="${product.title}">
+            </div>
+            <div class="grid bg">
+                <img src="${sixthImage}" alt="${product.title}">
+            </div>
+        </div>
+        <div class="there">
+            <p id="name">${product.brand}</p>
+            <H1 id="des">${product.title}</H1>
+            <div>
+               <p>${product.descp}</p>
+
+                <div class="more">
+                    <a href="">Read More</a>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <div class="guide">
+                    <a href="">Size guide</a>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="checkBtn" id="checkBtn">
+                        <div id="selectedSize" class="flex">
+                            <p id="sizeName">Check-ln L</p>
+                            <span id="sizeDimensions">78 x 52 x 27 cm</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down" id="iconToggle"></i>
+                    </div>
+                    <div class="checkBtns" id="checkBtns">
+                        <div class="flex-bet size">
+                            <p>Cabin</p>
+                            <span> 55 x 40 x 23 cm</span>
+                        </div>
+
+                        <div class="flex-bet size">
+                            <p>Check-In L</p>
+                            <span>78 x 52 x 27 cm</span>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="flex-center">
+                    <p>Colour:</p>
+                    <span> Gloss Lilac purple</span>
+
+                </div>
+                <div class="flex-center">
+                    <p>GLOSS</p>
+                    <div class="gap-center">
+                        <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwc5ebf065/images/swatch/SWATCH_HYBRID_LILAC.jpg"
+                            alt="">
+
+
+                        <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dwf6d1c11c/images/swatch/allwhite_gloss.png"
+                            alt="">
+
+                        <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw70c27f2a/images/swatch/steel_blue.jpg"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="flex-center">
+                    <p>MATTE</p>
+                    <div class="">
+                        <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw2e74b9dc/images/swatch/allblack_matte.png"
+                            alt="">
+                    </div>
+                </div>
+
+
+               <div class="cart">
+                                    <button class="cartBtn" id="cart">
+                                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                                    </button>
+                                    <p><span id="currency">${productCurrency}</span> <span id="price">${formatPrice(product.price)}</span></p>
+                                </div>
+
+                </div>
+
+                <div class="key">
+                    <h5>Key Elements</h5>
+                    <div class="grid-2 gap10">
+                        <div class="tsa">
+                            <div class="grid">
+                                               <img src="${seventhImage}" alt="${product.title}">
+
+                            </div>
+                            <div class="tsa-text">
+                                <h3>TSA-Approved Locks</h3>
+                                <p>Each of our suitcases features TSA-approved locks that can be opened by security
+                                    during airline baggage checks without causing any damage.</p>
+                            </div>
+                        </div>
+
+                        <div class="tsa">
+                            <div class="grid">
+                                               <img src="${eightImage}" alt="${product.title}">
+
+                            </div>
+                            <div class="tsa-text">
+                                <h3>Flex Divider</h3>
+                                <p>Keep your packed items in perfect order during transit with the height adjustable
+                                    Flex Divider, which can be adapted to accommodate your belongings or removed
+                                    completely.</p>
+                            </div>
+                        </div>
+
+                        <div class="tsa">
+                            <div class="grid">
+                                                <img src="${ninethImage}" alt="${product.title}">
+
+                            </div>
+                            <div class="tsa-text">
+                                <h3>RIMOWA Multiwheel® System</h3>
+                                <p>Pioneered by RIMOWA, this high-end system guarantees stable and effortless
+                                    steering thanks to ball-bearing mounted wheels with cushioned axels.</p>
+                            </div>
+                        </div>
+                        <div class="tsa">
+                            <div class="grid">
+                                               <img src="${tenthImage}" alt="${product.title}">
+
+                            </div>
+                            <div class="tsa-text">
+                                <h3>Telescopic Handler</h3>
+                                <p>Engineered to offer maximum comfort and smooth manoeuvrability, this multi-step
+                                    system allows you to seamlessly adjust the handle height according to your
+                                    needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="red">
+                <div class="mgb">
+                    <div class="flex-bet">
+                        <div class="flex-center cursor" id="plusBtn">
+                            <i class="fa-solid fa-plus" id="plusToggle"></i>
+                            <p>Size and Weight</p>
+                        </div>
+                        <div class="flex-center" id="metBtns">
+                            <a href="#">Metric</a>
+                            <a href="#">Imperial</a>
+
+                        </div>
+
+                    </div>
+                    <div id="plusBtns" class="plusBtns">
+
+                    <div class="metric">
+                        <div class="metric gap10">
+                            <div class="cm">
+                                <div class="bdd">
+                                    <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw08e55b51/images/sizes/Hybrid_CheckinL_PF.png"
+                                        alt="">
+                                </div>
+                                <p>Width: 52 cm</p>
+                            </div>
+                            <div class="cm">
+                                <div class="bdd bdd-right">
+                                    <img src="https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw47b44524/images/sizes/Hybrid_CheckinL_PS.png"
+                                        alt="">
+
+                                </div>
+
+                                <p>Width: 52 cm</p>
+
+                            </div>
+                            <div class="filt">
+                                <p>Height</p>
+                                <p> 78 cm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="airline">
+                        <div class="flex-bet">
+                            <p>Measurement</p>
+                            <p>78 x 52 x 27 cm</p>
+                        </div>
+
+                        <div class="flex-bet">
+                            <p>Weight</p>
+                            <p>5.9 kg
+                            </p>
+                        </div>
+
+                        <div class="flex-bet">
+                            <p>Volume</p>
+                            <p>84 L</p>
+                        </div>
+
+                        <a href="#">Airline compatibility</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="material cursor">
+                    <div class="flex-center" id="matBtn">
+                        <i class="fa-solid fa-plus" id="matToggle"></i>
+                        <p>Materials</p>
+                    </div>
+                    <div class="mat-text matBtns" id="matBtns">
+                        <div class="flex-center">
+                            <p>Exterior :</p>
+                            <p>Polycarbonate</p>
+                        </div>
+                        <div class="flex-center">
+                            <p>Corners :</p>
+                            <p>Anodised Aluminium</p>
+                        </div>
+                        <div class="flex-center">
+                            <p>Interior :</p>
+                            <p>Polyester</p>
+                        </div>
+                        <div class="flex-center">
+                            <p>Handles :</p>
+                            <p>Hard-wearing Plastic</p>
+                        </div>
+
+                        <div class="flex-center">
+                            <p>Wheels :</p>
+                            <p>Hard-wearing Plastic</p>
+                        </div>
+
+
+                        <div class="flex-center">
+                            <p>Divider :</p>
+                            <p>Polyester & Mesh</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="guarantee cursor">
+                    <div class="flex-center" id="lifeBtn">
+                        <i class="fa-solid fa-plus" id="lifeToggle"></i>
+                        <p style="color: rgb(17, 13, 13);">Lifetime Guarantee</p>
+                    </div>
+                    <p id="lifeBtns">
+                        This product comes with RIMOWA's lifetime guarantee. For easy enjoyment of the lifetime
+                        guarantee, please register your RIMOWA suitcase <a href="#">here</a>.
+                    </p>
+
+                </div>
+
+                <div class="contact cursor">
+                    <div class="flex-center" id="contBtn">
+                        <i class="fa-solid  fa-plus" id="contToggle"></i>
+                        <p style="color: rgb(17, 13, 13);">Contact Us</p>
+                    </div>
+                    <div id="contBtns">
+                    <p>Call us at :</p>
+                    <a href="#">+44 207-660 0547</a>
+                    <p><a href="#">Contact us by email</a></p>
+                    </div>
+                </div>
+
+                <div class="FAQ cursor">
+                    <div class="flex-center" id="faqBtn">
+                        <i class="fa-solid fa-plus" id="faqToggle"></i>
+                        <p style="color: rgb(17, 13, 13);">FAQ</p>
+                    </div>
+                    <p id="faqBtns">See our <a href="#">FAQs.</a></p>
+
+                </div>
+                <div class="flex-center sku">
+                    <p>Product SKU:</p>
+                    <p>88373751</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </main>
+                `;
+                $('#product-details').html(productDetails);
+        
+                // Add to Cart functionality
+                $('#cart').on('click', function () {
+                    console.log('playing')
+                    let image = $('#image').attr('src');
+                    let price = parseFloat($('#price').text().replace(/,/g, ''));
+                    let name = $('#name').text();
+                    let description = $('#des').text();
+        
+                    let cartProduct = {
+                        image: image,
+                        price: price,
+                        name: name,
+                        description: description,
+                        currency: productCurrency,
+                        quantity: 1
+                    };
+        
+                    let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    let productExists = cart.find(item => item.name === cartProduct.name);
+        
+                    if (productExists) {
+                        alert('Product is already in the cart');
+                    } else {
+                        cart.push(cartProduct);
+                        localStorage.setItem('cartItems', JSON.stringify(cart));
+                        updateCartCount();
+                        alert('Product added to cart');
+                    }
+                });
+        
+                // Update cart count
+                function updateCartCount() {
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    $("#count").text(cartItems.length);
+                }
+        
+                updateCartCount();
+        
+                // Show cart modal
+                $("#cartLink").on('click', function (e) {
+                    e.preventDefault();
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    let cartModal = $('#cartModal');
+                    let cartItemsContainer = $('#cartItems').empty();
+                    let cartSummary = $('#cartSummary').empty();
+        
+                    if (cartItems.length === 0) {
+                        cartItemsContainer.html('<p>Your cart is empty.</p>');
+                    } else {
+                        cartItems.forEach((item, index) => {
+                            cartItemsContainer.append(`
+                                <div class="cart-item" data-index="${index}">
+                                    <img src="${item.image}" alt="${item.name}" width="100">
+                                    <p>${item.name}</p>
+                                    <p>${item.description}</p>
+                                    <p style="color:black">${product.currency} <span id="price-${index}">${formatPrice(item.price * item.quantity)}</span></p>
+                                    <div>
+                                        <button class="minus-btn" data-index="${index}">-</button>
+                                        <span id="quantity-${index}" style="color:black">${item.quantity}</span>
+                                        <button class="plus-btn" data-index="${index}">+</button>
+                                    </div>
+                                    <button class="remove-btn" data-index="${index}">Remove</button>
+                                </div>
+                            `);
+                        });
+        
+                        // Append the checkout button only once
+                        cartSummary.html(`
+                            <h3>Cart Summary</h3>
+                            <p id="subtotal">Subtotal: ${productCurrency} ${formatPrice(calculateCartSubtotal())}</p>
+                            <button id="checkoutBtn">Checkout</button>
+                        `);
+        
+                        // Checkout functionality
+                        $('#checkoutBtn').on('click', function () {
+                            alert('Proceeding to checkout...');
+                            window.location.href = 'checkout.html';
+                        });
+                    }
+        
+                    // Increase or decrease quantity and remove item functionality
+                    $('.plus-btn').on('click', increaseQuantity);
+                    $('.minus-btn').on('click', decreaseQuantity);
+                    $('.remove-btn').on('click', removeItem);
+        
+                    cartModal.show();
+                });
+        
+                // Close cart modal
+                $('#closeCart').on('click', function () {
+                    $('#cartModal').hide();
+                });
+        
+                // Remove item from cart
+                function removeItem() {
+                    let index = $(this).data('index');
+                    let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+        
+                    cart.splice(index, 1);
+                    localStorage.setItem('cartItems', JSON.stringify(cart));
+                    updateCartCount();
+                    $("#cartLink").click();  // Refresh cart modal
+                }
+        
+                // Increase quantity
+                function increaseQuantity() {
+                    let index = $(this).data('index');
+                    let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+        
+                    cart[index].quantity += 1;
+                    localStorage.setItem('cartItems', JSON.stringify(cart));
+        
+                    $(`#quantity-${index}`).text(cart[index].quantity);
+                    $(`#price-${index}`).text(formatPrice(cart[index].price * cart[index].quantity));
+        
+                    // Only update the subtotal instead of the whole cart summary
+                    updateCartSubtotal();
+                }
+        
+                // Decrease quantity
+                function decreaseQuantity() {
+                    let index = $(this).data('index');
+                    let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+        
+                    if (cart[index].quantity > 1) {
+                        cart[index].quantity -= 1;
+                        localStorage.setItem('cartItems', JSON.stringify(cart));
+        
+                        $(`#quantity-${index}`).text(cart[index].quantity);
+                        $(`#price-${index}`).text(formatPrice(cart[index].price * cart[index].quantity));
+        
+                        // Only update the subtotal instead of the whole cart summary
+                        updateCartSubtotal();
+                    }
+                }
+        
+                // Update the cart subtotal only
+                function updateCartSubtotal() {
+                    let subtotal = calculateCartSubtotal();
+                    $('#subtotal').text(`Subtotal: ${productCurrency} ${formatPrice(subtotal)}`);
+                }
+        
+                // Calculate cart subtotal
+                function calculateCartSubtotal() {
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+                }
+        
+                // Helper function to format price with commas
+                function formatPrice(price) {
+                    return price.toLocaleString('en-US', { minimumFractionDigits: 2 });
+                }
+            } else {
+                $('#product-details').html('<p>No product details available.</p>');
+            }
+        });
+        </script>
+        
+</body>
+</html>
