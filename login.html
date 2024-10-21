@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -46,6 +46,150 @@
 
     <script>
       
+
+    </script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Enter login details</h1>
+
+        <form id="userForm">
+            <!-- <div><input name="first_name" id="first" placeholder="Enter first name" /></div> -->
+            <!-- <div><input name="last_name" id="last" placeholder="Enter last name" /></div> -->
+            <div> <input name="email" id="email" placeholder="Enter email address" />
+                <div style="height: 20px;"><span id="Cerr" style="font-size: .6rem; color: red;"></span></div>
+
+            </div>
+            <!-- <div><input name="phone" id="phone" placeholder="Enter phone number" /></div> -->
+            <!-- <div><input name="store_name" id="store_name" placeholder="Enter store name" /> </div> -->
+            <div>
+                <input name="password" id="password" placeholder="Enter password"/> 
+                <div style="height: 20px;"><span id="Ierr" style="font-size: .6rem; color: red;"></span></div>
+
+
+            </div>
+            <div>
+                <!-- <textarea name="descp" id="description"></textarea> -->
+            </div>
+            <div>
+                <!-- <input type="file" name="icon" id="icon"> -->
+            </div>
+            <div>
+                <!-- <input type="file" name="banner" id="banner"> -->
+            </div>
+
+            <div style="margin-left: 180px; margin-top: 15px;">
+                <a href="signup.html" style="color: black; text-decoration: none;">
+                    <span class="have">have an account!!</span>
+                 </a>
+               </div>
+
+            <button>Login</button>
+        </form>
+    </div>
+
+    <script>
+
+
+        $(document).ready(function () {
+            console.log('login')
+
+            $('#userForm').on('submit', function (e) {
+                e.preventDefault()
+               
+
+                let valid = true
+                e.preventDefault()
+                let emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+                // let passRegex = /^(?=.[0-9])(?=.[a-z])(?=.[A-Z])(?=.\W)(?!.* ).{8,16}$/;
+                let email = $('#email').val()
+                let password = $('#password').val()
+                let Cerr = $('#Cerr')
+                let Ierr = $('#Ierr')
+                if(email === ""){
+                    Cerr.text('Please Enter an Email Address')
+                    valid = false
+                }else if(!emailRegex.test(email)){
+                    Cerr.text('Please Entebr a Correct Email Address')
+                    valid = false
+                }else{
+                    Cerr.text('')
+                }if(password === ""){
+                    Ierr.text('Please Enter a Password')
+                    valid = false
+                
+                }
+                // else if(!passRegex.test(password)){
+                
+                //     Ierr.text('Password must contain 1-9, A-Z, a-z and !')
+                //     valid = false
+                // }else{
+                //     Ierr.text('')
+                // }
+                if(valid == true){
+                $.ajax({
+                    url: 'http://ecommerce.reworkstaging.name.ng/v2/users/login',
+                    type: 'POST',
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        email: email,
+                        password: password,
+                    }),
+                    // processData: false,
+                    success: function (res) {
+                        console.log(res)
+                        let adminId = res.id
+                        let passId = res.password
+                        let emailId = res.email
+                        localStorage.setItem('user', adminId)
+                        let email = $('#email').val()
+                        let password = $('#password').val()
+                        if(email == emailId ){
+                            alert('Login Successful!')
+                            window.location.href="dash.html"
+                        }else{
+                            alert('email or password does not match')
+                        }
+                    },
+                    error: function (error) {
+                        console.log(error)
+                        alert('Login failed ' + error)
+                        // console.log(error)
+                    }
+                })}else{
+
+                }
+
+            
+            })
+
+        })
 
     </script>
 </body>

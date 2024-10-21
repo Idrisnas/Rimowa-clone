@@ -598,6 +598,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <!-- <script src="js/script.js"></script> -->
     <!-- <script src="js/cart.js"></script> -->
+    <script src="js/ccscript.js"></script>
 
 
     <script>
@@ -624,12 +625,17 @@
         //     }
         //     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
         // });
+       
         $(document).ready(function () {
+            // Load selected product details from localStorage
             let product = localStorage.getItem('selectedProduct');
-            let productCurrency = product.currency ;
             if (product) {
                 product = JSON.parse(product);
-
+        
+                if (!product.currency || !product.price) {
+                    console.error('Product currency or price is missing');
+                }
+        
                 let firstImage = product.images[0];
                 let secondImage = product.images[1];
                 let thirdImage = product.images[2]
@@ -640,10 +646,12 @@
                 let eightImage = product.images[7]
                 let ninethImage = product.images[8]
                 let tenthImage = product.images[9]
-                let productCurrency = product.currency ;
-
+                // let productCurrency = product.currency ;
+                let productCurrency = product.currency;
+        
+                // Display product details
                 let productDetails = `
-                    <main>
+                  <main>
     <div class="flex-links">
         <a href="">LUGGAGE</a>
         <i class="fa-solid fa-circle"></i>
@@ -963,10 +971,10 @@
     </main>
                 `;
                 $('#product-details').html(productDetails);
-            } else {
-                $('#product-details').html('<p>No product details available.</p>');
-            }
-            $('#cart').on('click', function () {
+        
+                // Add to Cart functionality
+                $('#cart').on('click', function () {
+                    console.log('playing')
                     let image = $('#image').attr('src');
                     let price = parseFloat($('#price').text().replace(/,/g, ''));
                     let name = $('#name').text();
@@ -977,7 +985,7 @@
                         price: price,
                         name: name,
                         description: description,
-                        // currency: productCurrency,
+                        currency: productCurrency,
                         quantity: 1
                     };
         
@@ -1017,8 +1025,8 @@
                             cartItemsContainer.append(`
                                 <div class="cart-item" data-index="${index}">
                                     <img src="${item.image}" alt="${item.name}" width="100">
-                                    <p>${product.brand}</p>
-                                    <p>${product.title}</p>
+                                    <p>${item.name}</p>
+                                    <p>${item.description}</p>
                                     <p style="color:black">${product.currency} <span id="price-${index}">${formatPrice(item.price * item.quantity)}</span></p>
                                     <div>
                                         <button class="minus-btn" data-index="${index}">-</button>
@@ -1103,7 +1111,7 @@
                 // Update the cart subtotal only
                 function updateCartSubtotal() {
                     let subtotal = calculateCartSubtotal();
-                    $('#subtotal').text(`Subtotal: productCurrency ${formatPrice(subtotal)}`);
+                    $('#subtotal').text(`Subtotal: ${productCurrency} ${formatPrice(subtotal)}`);
                 }
         
                 // Calculate cart subtotal
@@ -1116,11 +1124,9 @@
                 function formatPrice(price) {
                     return price.toLocaleString('en-US', { minimumFractionDigits: 2 });
                 }
-            
-            //  else {
-            //     $('#product-details').html('<p>No product details available.</p>');
-            // }
-        
+            } else {
+                $('#product-details').html('<p>No product details available.</p>');
+            }
         });
     
 
